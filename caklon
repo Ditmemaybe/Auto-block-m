@@ -22,8 +22,8 @@ KeySystem = false
 })
 
 local AutoBlockTab = Window:CreateTab("Auto Block", 4483362458)
-local FakeBlockTab = Window:CreateTab("Fake Block", 4483362458)
-local AutoPunchTab = Window:CreateTab("Auto Punch", 4483362458)
+local FakeBlockTab = Window:CreateTab("idk", 4483362458)
+local AutoPunchTab = Window:CreateTab("idk", 4483362458)
 
 
 
@@ -136,7 +136,7 @@ AutoBlockTab:CreateParagraph({
 })
 
 AutoBlockTab:CreateDropdown({
-Name = "Facing Check",
+Name = "Đối mặt với kiểm tra",
 Options = {"Loose", "Strict"},
 CurrentOption = "Loose",
 Flag = "FacingCheckMode",
@@ -144,7 +144,7 @@ Callback = function(Option) looseFacing = Option == "Loose" end
 })
 
 AutoBlockTab:CreateInput({
-Name = "Detection Range",
+Name = "Phạm vi phát hiện",
 PlaceholderText = "18",
 RemoveTextAfterFocusLost = false,
 Flag = "DetectionRange",
