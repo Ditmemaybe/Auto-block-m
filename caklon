@@ -9,12 +9,12 @@ local Humanoid, Animator
 
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 local Window = Rayfield:CreateWindow({
-Name = "🐿🫙 hub",
-LoadingTitle = "🐿🫙",
-LoadingSubtitle = "skibidi sigma",
+Name = "sốc lọ hub",
+LoadingTitle = "sốc lọ",
+LoadingSubtitle = "sốc lọ sigma",
 ConfigurationSaving = {
 Enabled = true,
-FolderName = "🐿🫙 hub",
+FolderName = "sốc lọ hub",
 FileName = "Settings"
 },
 Discord = {Enabled = false},
