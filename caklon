@@ -138,17 +138,6 @@ AutoBlockTab:CreateParagraph({
     Content = "use audio auto block and use 20 range for it"
 })
 
-local facingCheckEnabled = true
-
-AutoBlockTab:CreateToggle({
-    Name = "Enable Facing Check",
-    CurrentValue = true,
-    Flag = "FacingCheckToggle",
-    Callback = function(Value)
-        facingCheckEnabled = Value
-    end
-})
-
 AutoBlockTab:CreateDropdown({
 Name = "Facing Check",
 Options = {"Loose", "Strict"},
