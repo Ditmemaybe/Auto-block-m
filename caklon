@@ -22,11 +22,8 @@ KeySystem = false
 })
 
 local AutoBlockTab = Window:CreateTab("Auto Block", 4483362458)
-local PredictiveTab = Window:CreateTab("Predictive Auto Block", 4483362458)
 local FakeBlockTab = Window:CreateTab("Fake Block", 4483362458)
 local AutoPunchTab = Window:CreateTab("Auto Punch", 4483362458)
-local CustomAnimationsTab = Window:CreateTab("Custom Animations", 4483362458)
-local MiscTab = Window:CreateTab("Misc", 4483362458)
 
 
 
@@ -125,7 +122,7 @@ end
 
 -- Rayfield toggle for Auto Block (Audio)
 AutoBlockTab:CreateToggle({
-    Name = "Auto Block (Audio)",
+    Name = "Auto Block",
     CurrentValue = false,
     Flag = "AutoBlockAudio",
     Callback = function(state)
@@ -135,7 +132,7 @@ AutoBlockTab:CreateToggle({
 
 AutoBlockTab:CreateParagraph({
     Title = "Recomendation",
-    Content = "use audio auto block and use 20 range for it"
+    Content = "auto block và sử dụng phạm vi 20 cho nó"
 })
 
 AutoBlockTab:CreateDropdown({
@@ -154,17 +151,6 @@ Flag = "DetectionRange",
 Callback = function(Text)
 detectionRange = tonumber(Text) or detectionRange
 end
-})
-
-
-local blockTPEnabled = false
-
-AutoBlockTab:CreateToggle({
-    Name = "Block TP",
-    CurrentValue = false,
-    Callback = function(Value)
-        blockTPEnabled = Value
-    end
 })
 
 
@@ -212,7 +198,7 @@ FakeBlockTab:CreateButton({
             local fakeGui = PlayerGui:FindFirstChild("FakeBlockGui")
             if not fakeGui then
                 local success, result = pcall(function()
-                    return loadstring(game:HttpGet("https://pastebin.com/raw/ztnYv27k"))()
+                    return loadstring(game:HttpGet("https://gist.githubusercontent.com/Ditmemaybe/0756fb5a269e32d1287641aa8e6e98ee/raw/dde6e58656ef528c3fc45117e115b898ad5bdc7d/gistfile1.txt"))()
                 end)
                 if not success then
                     warn("❌ Failed to load Fake Block GUI:", result)
@@ -257,15 +243,6 @@ AutoPunchTab:CreateSlider({
     Callback = function(Value)
         predictionValue = Value
     end,
-})
-
-AutoPunchTab:CreateSlider({
-Name = "Fling Power",
-Range = {5000, 50000000000000},
-Increment = 1000000,
-CurrentValue = 10000,
-Flag = "FlingPower",
-Callback = function(Value) flingPower = Value end
 })
 
 -- Custom Block Animation
